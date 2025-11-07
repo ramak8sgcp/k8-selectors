@@ -4,10 +4,11 @@ metadata:
   name: nginx
 spec:
   containers:
+  # docker run -d --name nginx nginx
   - name: nginx
     image: nginx:stable-perl
-  nodeSelector:
-    hardware: gpu
+  # nodeSelector:
+  #   hardware: gpu
   tolerations:
   - key: "hardware"
     operator: "Equal"
